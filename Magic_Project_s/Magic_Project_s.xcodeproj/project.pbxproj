@@ -13,6 +13,12 @@
 		8B87BCC91AD012F0009D5B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B87BCC81AD012F0009D5B9A /* Images.xcassets */; };
 		8B87BCCC1AD012F0009D5B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B87BCCA1AD012F0009D5B9A /* LaunchScreen.xib */; };
 		8B87BCD81AD012F0009D5B9A /* Magic_Project_sTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87BCD71AD012F0009D5B9A /* Magic_Project_sTests.swift */; };
+		8B9B478D1AD97014009AFE8B /* Troll2HViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B478C1AD97014009AFE8B /* Troll2HViewController.swift */; };
+		8B9B478F1AD97027009AFE8B /* PentaclViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B478E1AD97027009AFE8B /* PentaclViewController.swift */; };
+		8B9B47911AD97038009AFE8B /* EmperorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B47901AD97038009AFE8B /* EmperorViewController.swift */; };
+		8B9B47941AD97966009AFE8B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B47931AD97966009AFE8B /* CustomViewController.swift */; };
+		8BEB69C01AD8355B0078B4B2 /* MultiPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */; };
+		8BEB69C21AD84AAB0078B4B2 /* OnevsOne_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB69C11AD84AAB0078B4B2 /* OnevsOne_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		8B87BCD11AD012F0009D5B9A /* Magic_Project_sTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Magic_Project_sTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B87BCD61AD012F0009D5B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B87BCD71AD012F0009D5B9A /* Magic_Project_sTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_Project_sTests.swift; sourceTree = "<group>"; };
+		8B9B478C1AD97014009AFE8B /* Troll2HViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Troll2HViewController.swift; sourceTree = "<group>"; };
+		8B9B478E1AD97027009AFE8B /* PentaclViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PentaclViewController.swift; sourceTree = "<group>"; };
+		8B9B47901AD97038009AFE8B /* EmperorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmperorViewController.swift; sourceTree = "<group>"; };
+		8B9B47931AD97966009AFE8B /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPlayersViewController.swift; sourceTree = "<group>"; };
+		8BEB69C11AD84AAB0078B4B2 /* OnevsOne_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnevsOne_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,8 @@
 		8B87BCE11AD01438009D5B9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */,
+				8B9B47921AD9706B009AFE8B /* ControllerMultiplayer */,
 				8B87BCC31AD012F0009D5B9A /* ViewController.swift */,
 			);
 			name = Controller;
@@ -134,6 +148,18 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8B9B47921AD9706B009AFE8B /* ControllerMultiplayer */ = {
+			isa = PBXGroup;
+			children = (
+				8B9B47931AD97966009AFE8B /* CustomViewController.swift */,
+				8B9B478C1AD97014009AFE8B /* Troll2HViewController.swift */,
+				8B9B478E1AD97027009AFE8B /* PentaclViewController.swift */,
+				8B9B47901AD97038009AFE8B /* EmperorViewController.swift */,
+				8BEB69C11AD84AAB0078B4B2 /* OnevsOne_ViewController.swift */,
+			);
+			name = ControllerMultiplayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B87BCC41AD012F0009D5B9A /* ViewController.swift in Sources */,
+				8B9B478D1AD97014009AFE8B /* Troll2HViewController.swift in Sources */,
+				8B9B478F1AD97027009AFE8B /* PentaclViewController.swift in Sources */,
 				8B87BCC21AD012F0009D5B9A /* AppDelegate.swift in Sources */,
+				8BEB69C01AD8355B0078B4B2 /* MultiPlayersViewController.swift in Sources */,
+				8BEB69C21AD84AAB0078B4B2 /* OnevsOne_ViewController.swift in Sources */,
+				8B9B47911AD97038009AFE8B /* EmperorViewController.swift in Sources */,
+				8B9B47941AD97966009AFE8B /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +461,7 @@
 				8B87BCDD1AD012F0009D5B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B87BCDE1AD012F0009D5B9A /* Build configuration list for PBXNativeTarget "Magic_Project_sTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +470,7 @@
 				8B87BCE01AD012F0009D5B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
