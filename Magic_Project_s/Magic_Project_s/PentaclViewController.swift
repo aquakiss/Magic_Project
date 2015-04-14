@@ -211,6 +211,11 @@ class PentaclViewController: UIViewController {
         alertController.show()
     }
     
+    @IBAction func RefreshView(sender: UIButton) {
+        Initialize()
+    }
+    
+    
     // lance un dé
     func RandLanceDe() -> Int{
         //sort un chiffre random
@@ -236,7 +241,7 @@ class PentaclViewController: UIViewController {
     //Fonction qui verifie si l'un des de joueur est 0 pv
     func WinCheckLife() {
         // Victoire pour player 1 si 3 et 4 sont à 0pv
-        if((LiifeP3.text).toInt() < 1 && (LiifeP4.text).toInt() < 1){
+        if((LiifeP3.text).toInt() < 1 && (LiifeP4.text).toInt() < 1 && (LiifeP5.text).toInt() > 1 && (LiifeP1.text).toInt() > 1 && (LiifeP2.text).toInt() > 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -246,7 +251,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
         // Victoire pour player 2 si 4 et 5 sont à 0pv
-        else if((LiifeP4.text).toInt() < 1 && (LiifeP5.text).toInt() < 1){
+        else if((LiifeP4.text).toInt() < 1 && (LiifeP5.text).toInt() < 1 && (LiifeP3.text).toInt() > 1 && (LiifeP2.text).toInt() > 1 && (LiifeP1.text).toInt() > 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -256,7 +261,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
         // Victoire pour player 3 si 1 et 5 sont à 0pv
-        else if((LiifeP1.text).toInt() < 1 && (LiifeP5.text).toInt() < 1){
+        else if((LiifeP1.text).toInt() < 1 && (LiifeP5.text).toInt() < 1 && (LiifeP2.text).toInt() > 1 && (LiifeP3.text).toInt() > 1 && (LiifeP4.text).toInt() > 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -266,7 +271,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
         // Victoire pour player 4 si 1 et 2 sont à 0pv
-            else if((LiifeP1.text).toInt() < 1 && (LiifeP2.text).toInt() < 1){
+            else if((LiifeP1.text).toInt() < 1 && (LiifeP2.text).toInt() < 1 && (LiifeP3.text).toInt() > 1 && (LiifeP4.text).toInt() > 1 && (LiifeP5.text).toInt() > 1){
                 let alertController: UIAlertView = UIAlertView()
                 alertController.delegate = self
                 alertController.title = "Partie Gagné"
@@ -276,7 +281,7 @@ class PentaclViewController: UIViewController {
                 Initialize() // reinitialize tout
         }
         // Victoire pour player 5 si 3 et 2 sont à 0pv
-                else if((LiifeP2.text).toInt() < 1 && (LiifeP3.text).toInt() < 1){
+                else if((LiifeP2.text).toInt() < 1 && (LiifeP3.text).toInt() < 1 && (LiifeP4.text).toInt() > 1 && (LiifeP1.text).toInt() > 1 && (LiifeP5.text).toInt() > 1){
                     let alertController: UIAlertView = UIAlertView()
                     alertController.delegate = self
                     alertController.title = "Partie Gagné"
@@ -291,7 +296,7 @@ class PentaclViewController: UIViewController {
     //Fonction qui verifie si l'un des de joueur est 10 marqueur poisons
     func WinCheckPoison() {
         // Victoire pour player 1 si 3 et 4 sont à 10 marqueur poison
-        if((MarkPoisonP3.text).toInt() > 9 && (MarkPoisonP4.text).toInt() > 9){
+        if((MarkPoisonP3.text).toInt() > 9 && (MarkPoisonP4.text).toInt() > 9 && (MarkPoisonP5.text).toInt() < 9 && (MarkPoisonP2.text).toInt() < 9 && (MarkPoisonP1.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -301,7 +306,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
             // Victoire pour player 2 si 4 et 5 sont à 10 marqueur
-        else if((MarkPoisonP4.text).toInt() > 9 && (MarkPoisonP5.text).toInt() > 9){
+        else if((MarkPoisonP4.text).toInt() > 9 && (MarkPoisonP5.text).toInt() > 9 && (MarkPoisonP1.text).toInt() < 9 && (MarkPoisonP3.text).toInt() < 9 && (MarkPoisonP2.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -311,7 +316,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
             // Victoire pour player 3 si 1 et 5 sont à 10 marqueur
-        else if((MarkPoisonP1.text).toInt() > 9 && (MarkPoisonP5.text).toInt() > 9){
+        else if((MarkPoisonP1.text).toInt() > 9 && (MarkPoisonP5.text).toInt() > 9 && (MarkPoisonP4.text).toInt() < 9 && (MarkPoisonP2.text).toInt() < 9 && (MarkPoisonP3.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -321,7 +326,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
             // Victoire pour player 4 si 1 et 2 sont à 10 marqueur
-        else if((MarkPoisonP1.text).toInt() > 9 && (MarkPoisonP2.text).toInt() > 9){
+        else if((MarkPoisonP1.text).toInt() > 9 && (MarkPoisonP2.text).toInt() > 9 && (MarkPoisonP3.text).toInt() < 9 && (MarkPoisonP4.text).toInt() < 9 && (MarkPoisonP5.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -331,7 +336,7 @@ class PentaclViewController: UIViewController {
             Initialize() // reinitialize tout
         }
         // Victoire pour player 5 si 3 et 2 sont à 10 marqueur
-        else if((MarkPoisonP2.text).toInt() > 9 && (MarkPoisonP3.text).toInt() > 9){
+        else if((MarkPoisonP2.text).toInt() > 9 && (MarkPoisonP3.text).toInt() > 9 && (MarkPoisonP4.text).toInt() < 9 && (MarkPoisonP5.text).toInt() < 9 && (MarkPoisonP1.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
             alertController.title = "Partie Gagné"
@@ -339,6 +344,27 @@ class PentaclViewController: UIViewController {
             alertController.addButtonWithTitle("OK")
             alertController.show()
             Initialize() // reinitialize tout
+        }
+        
+        if((MarkPoisonP1.text).toInt() > 9){
+            LiifeP1.text = "0"
+            StepperlifP1.value = 0
+        }
+        if((MarkPoisonP2.text).toInt() > 9){
+            LiifeP2.text = "0"
+            StepperlifP2.value = 0
+        }
+        if((MarkPoisonP3.text).toInt() > 9){
+            LiifeP3.text = "0"
+            StepperlifP3.value = 0
+        }
+        if((MarkPoisonP4.text).toInt() > 9){
+            LiifeP4.text = "0"
+            StepperlifP4.value = 0
+        }
+        if((MarkPoisonP5.text).toInt() > 9){
+            LiifeP5.text = "0"
+            StepperlifP5.value = 0
         }
     }
     
