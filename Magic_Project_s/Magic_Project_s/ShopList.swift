@@ -9,19 +9,18 @@
 import Foundation
 
 class ShopList {
-    //tableau stock resto
-    var shopList = [Shop]()
     
-    //methodes acces au resto
-    func addShop(shop : Shop){
-        shopList.append(shop)
+    var shopliste = [Shop]()
+    
+    func addShop(shoop : Shop){
+        shopliste.append(shoop)
     }
     
     func shopArray() -> [Shop]{
-        return shopList
+        return shopliste
     }
     
     func shopAtIndex(index: Int)-> Shop{
-        return shopList[index]
+        return shopliste[index]
     }
 }

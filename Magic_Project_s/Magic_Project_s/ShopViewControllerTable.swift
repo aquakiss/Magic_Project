@@ -9,10 +9,19 @@
 import UIKit
 
 class ShopViewControllerTable: UITableViewController {
-
+    
+    var listsho : ShopList = ShopList()
+    var shoparray : [Shop]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        shoparray = listsho.shopArray()
+        
+        let tmp : Shop = Shop(name: "JoBar", adr: "33000, bdx", dejavisit: false)
+        
+        listsho.addShop(tmp)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,28 +35,28 @@ class ShopViewControllerTable: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+/*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 0
-    }
+    } */
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return listsho.shopArray().count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellShop", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
-
+        cell.textLabel.text? = shoparray[indexPath.row].nom
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -84,14 +93,27 @@ class ShopViewControllerTable: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
+        if(segue.identifier == "GoToAddShop"){
+            var destiViewController = segue.destinationViewController as FormShopViewController
+        }
+        else if(segue.identifier == "GotoGeolocS"){
+            var destinaViewController = segue.destinationViewController as MapShopViewController
+            let send = sender as UITableViewCell? //récupere la cell
+            let inde = tableView.indexPathForCell(send!)?.row //recupere l'index de la cell
+            destinaViewController.title = "n*\(inde!) \(shoparray[inde!].nom)"  // affiche en titre l'index de la cell
+            
+            //destinaViewController.listreçu = self.listshop
+            //destinaViewController.indecell = inde
+        }
     }
-    */
+    
 
 }
