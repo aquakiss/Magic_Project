@@ -8,23 +8,28 @@
 
 import UIKit
 
-let reuseIdentifier = "Cell"
-var boolInfini : Bool = true // variable servira a boucle infiniment tant que la personne n'aura pas saisi un nombre
-var nbplayers : String = "1" // variable recevra la valeur du textfield et déterminera le nb de player a créer
+let reuseIdentifier = "CellPlayer"
+var nbplayers : String = "1" // variable déterminera le nb de player a créer
+var boinfini  : Bool = false
 
 class CollectionCustomViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AlertDemandCreatPlayers()
-        println("3")
+        var test : String
+        
+        // Register cell classes
+        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
     }
-
+    
+    var nbreçu : Int!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,44 +43,44 @@ class CollectionCustomViewController: UICollectionViewController {
         //self.CollectionCustomViewController.reloadData()
     }
     
-    /* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va 
-    ** saisir dans l'alerte
-    */
-    func AlertDemandCreatPlayers(){
-        //Alerte demande combien de player va créé notre collectionview
-        //1. Create the alert controller.
-        var alert = UIAlertController(title: "Create players", message: "Enter a number [1 to 15]", preferredStyle: .Alert)
-        
-        //2. Add the text field. You can configure it however you need.
-        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-            textField.placeholder = "Number of players"
-        })
-        
-        //3. Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "Go!", style: .Default, handler: { (action) -> Void in
-            let textField = alert.textFields![0] as UITextField
-            
-            nbplayers = textField.text
-            
-            // condition testant si la personne a bien rentré un nombre
-            if( (nbplayers).toInt()! >= 1 && (nbplayers).toInt()! <= 15) {
-                println(nbplayers)
-            }
-            else {
-                nbplayers = "2"
-            }
-            println("Text \((nbplayers).toInt()!) et  Text field: \(textField.text)")
-            boolInfini = false
-        }))
-        
-        // 4. Present the alert.
-        self.presentViewController(alert, animated: true, completion: nil)
-        
-        // Register cell classes
-        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-    }
     
+
+
+/* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
+** saisir dans l'alerte
+*/
+func AlertDemandCreatPlayers(){
+    //Alerte demande combien de player va créé notre collectionview
+    //1. Create the alert controller.
+    var alert = UIAlertController(title: "Create players", message: "Enter a number [1 to 15]", preferredStyle: .Alert)
     
+    //2. Add the text field. You can configure it however you need.
+    alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+        textField.placeholder = "Number of players"
+    })
+    
+    //3. Grab the value from the text field, and print it when the user clicks OK.
+    alert.addAction(UIAlertAction(title: "Go!", style: .Default, handler: { (action) -> Void in
+        let textField = alert.textFields![0] as UITextField
+        
+        nbplayers = textField.text
+        
+        // condition testant si la personne a bien rentré un nombre
+        if( (nbplayers).toInt()! >= 1 && (nbplayers).toInt()! <= 15) {
+            println(nbplayers)
+        }
+        else {
+            nbplayers = "2"
+        }
+        boinfini = true
+        println("Text \((nbplayers).toInt()!) et  Text field: \(textField.text)")
+    }))
+    
+    // 4. Present the alert.
+    self.presentViewController(alert, animated: true, completion: nil)
+    
+}
+
     /*
     // MARK: - Navigation
 
@@ -97,16 +102,16 @@ class CollectionCustomViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
         
-        println("T \((nbplayers).toInt()!)")
+        while(boinfini == false){
+            AlertDemandCreatPlayers()
+        }
         return (nbplayers).toInt()!
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CellPlayer", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as UICollectionViewCell
     
         // Configure the cell
-        println("coupe ici, boucle infini apres")
-        
         return cell
     }
 

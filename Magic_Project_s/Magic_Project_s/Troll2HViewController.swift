@@ -215,14 +215,14 @@ class Troll2HViewController: UIViewController {
         G1Nomplayer1.text = "Player1"
         G1Nomplayer2.text = "Player2"
         G1MarkPoison.text = "0"
-        G1Liife.text = "20"
+        G1Liife.text = "30"
         G1StepperPoi.value = 0
         G1StepperLif.value = 30
         
         G2Nomplayer1.text = "Player3"
         G2Nomplayer2.text = "Player4"
         G2MarkPoison.text = "0"
-        G2Liife.text = "20"
+        G2Liife.text = "30"
         G2StepperLif.value = 30
         G2StepperPoi.value = 0
     }

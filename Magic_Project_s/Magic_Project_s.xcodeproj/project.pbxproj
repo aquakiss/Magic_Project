@@ -17,6 +17,11 @@
 		8B9B478F1AD97027009AFE8B /* PentaclViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B478E1AD97027009AFE8B /* PentaclViewController.swift */; };
 		8B9B47911AD97038009AFE8B /* EmperorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B47901AD97038009AFE8B /* EmperorViewController.swift */; };
 		8B9B47941AD97966009AFE8B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B47931AD97966009AFE8B /* CustomViewController.swift */; };
+		8BA7CD6A1ADF236A0082A492 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD691ADF236A0082A492 /* Shop.swift */; };
+		8BA7CD6C1ADF23880082A492 /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD6B1ADF23880082A492 /* ShopList.swift */; };
+		8BA7CD741ADF27790082A492 /* ShopViewControllerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */; };
+		8BA7CD761ADF27A90082A492 /* FormShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD751ADF27A90082A492 /* FormShopViewController.swift */; };
+		8BA7CD781ADF27D90082A492 /* MapShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD771ADF27D90082A492 /* MapShopViewController.swift */; };
 		8BA898771ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA898761ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift */; };
 		8BB8F2361ADD7F3100427CBA /* CollectionCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8F2351ADD7F3100427CBA /* CollectionCustomViewController.swift */; };
 		8BEB69C01AD8355B0078B4B2 /* MultiPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */; };
@@ -48,6 +53,11 @@
 		8B9B478E1AD97027009AFE8B /* PentaclViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PentaclViewController.swift; sourceTree = "<group>"; };
 		8B9B47901AD97038009AFE8B /* EmperorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmperorViewController.swift; sourceTree = "<group>"; };
 		8B9B47931AD97966009AFE8B /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		8BA7CD691ADF236A0082A492 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		8BA7CD6B1ADF23880082A492 /* ShopList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
+		8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerTable.swift; sourceTree = "<group>"; };
+		8BA7CD751ADF27A90082A492 /* FormShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormShopViewController.swift; sourceTree = "<group>"; };
+		8BA7CD771ADF27D90082A492 /* MapShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapShopViewController.swift; sourceTree = "<group>"; };
 		8BA898761ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		8BB8F2351ADD7F3100427CBA /* CollectionCustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCustomViewController.swift; sourceTree = "<group>"; };
 		8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPlayersViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */,
+				8BA7CD681ADF231F0082A492 /* ControllerShop */,
 				8B9B47921AD9706B009AFE8B /* ControllerMultiplayer */,
 				8B87BCC31AD012F0009D5B9A /* ViewController.swift */,
 			);
@@ -150,6 +161,8 @@
 		8B87BCE31AD0148D009D5B9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BA7CD691ADF236A0082A492 /* Shop.swift */,
+				8BA7CD6B1ADF23880082A492 /* ShopList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,6 +178,16 @@
 				8BA898751ADDCA97007B6EF5 /* CollectionViewController */,
 			);
 			name = ControllerMultiplayer;
+			sourceTree = "<group>";
+		};
+		8BA7CD681ADF231F0082A492 /* ControllerShop */ = {
+			isa = PBXGroup;
+			children = (
+				8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */,
+				8BA7CD751ADF27A90082A492 /* FormShopViewController.swift */,
+				8BA7CD771ADF27D90082A492 /* MapShopViewController.swift */,
+			);
+			name = ControllerShop;
 			sourceTree = "<group>";
 		};
 		8BA898751ADDCA97007B6EF5 /* CollectionViewController */ = {
@@ -278,11 +301,16 @@
 			files = (
 				8B87BCC41AD012F0009D5B9A /* ViewController.swift in Sources */,
 				8B9B478D1AD97014009AFE8B /* Troll2HViewController.swift in Sources */,
+				8BA7CD781ADF27D90082A492 /* MapShopViewController.swift in Sources */,
 				8B9B478F1AD97027009AFE8B /* PentaclViewController.swift in Sources */,
+				8BA7CD6C1ADF23880082A492 /* ShopList.swift in Sources */,
+				8BA7CD6A1ADF236A0082A492 /* Shop.swift in Sources */,
 				8BA898771ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift in Sources */,
+				8BA7CD741ADF27790082A492 /* ShopViewControllerTable.swift in Sources */,
 				8B87BCC21AD012F0009D5B9A /* AppDelegate.swift in Sources */,
 				8BEB69C01AD8355B0078B4B2 /* MultiPlayersViewController.swift in Sources */,
 				8BB8F2361ADD7F3100427CBA /* CollectionCustomViewController.swift in Sources */,
+				8BA7CD761ADF27A90082A492 /* FormShopViewController.swift in Sources */,
 				8BEB69C21AD84AAB0078B4B2 /* OnevsOne_ViewController.swift in Sources */,
 				8B9B47911AD97038009AFE8B /* EmperorViewController.swift in Sources */,
 				8B9B47941AD97966009AFE8B /* CustomViewController.swift in Sources */,

@@ -9,7 +9,9 @@
 import UIKit
 
 class MultiPlayersViewController: UIViewController {
-
+    var nbplayers : String = ""
+    var infini : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,22 +23,45 @@ class MultiPlayersViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func BtOnevs(sender: UIButton) {
-    }
-
-    @IBAction func BtTrolls(sender: UIButton) {
-    }
-    
-    @IBAction func BtPent(sender: UIButton) {
-    }
-    
-    @IBAction func BtEmp(sender: UIButton) {
-    }
-    
     @IBAction func BtCusto(sender: UIButton) {
+        println("coucou")
+        //AlertDemandCreatPlayers()
     }
     
-    
+    /* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
+    ** saisir dans l'alerte
+    */
+    func AlertDemandCreatPlayers(){
+        //Alerte demande combien de player va créé notre collectionview
+        //1. Create the alert controller.
+        
+        var alert = UIAlertController(title: "Create players", message: "Enter a number [1 to 15]", preferredStyle: .Alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.placeholder = "Number of players"
+        })
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Go!", style: .Default, handler: { (action) -> Void in
+            let textField = alert.textFields![0] as UITextField
+            
+            self.nbplayers = textField.text
+            
+            // condition testant si la personne a bien rentré un nombre
+            if( (self.nbplayers).toInt()! >= 1 && (self.nbplayers).toInt()! <= 15) {
+                println(self.nbplayers)
+            }
+            else {
+                self.nbplayers = "2"
+            }
+            self.infini = false
+            println("Text \((self.nbplayers).toInt()!) et  Text field: \(textField.text)")
+        }))
+        
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     // MARK: - Navigation
 
@@ -58,7 +83,9 @@ class MultiPlayersViewController: UIViewController {
             var desViewController = segue.destinationViewController as UIViewController
         }
         else if(segue.identifier == "GoToCusto"){
-            var desViewController = segue.destinationViewController as UIViewController
+            var desViewController = segue.destinationViewController as CollectionCustomViewController
+            println(self.nbplayers)
+            desViewController.nbreçu = self.nbplayers.toInt()!
         }
     
     
