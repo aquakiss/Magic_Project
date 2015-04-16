@@ -19,10 +19,7 @@ class ShopViewControllerTable: UITableViewController {
         shoparray = listsho.shopArray()
         
         let tmp : Shop = Shop(name: "JoBar", adr: "33000, bdx", dejavisit: false)
-        
-        println(tmp.ToString())
         listsho.addShop(tmp)
-        println(listsho.shopcount())
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -113,12 +110,15 @@ class ShopViewControllerTable: UITableViewController {
         }
         else if(segue.identifier == "GotoGeolocS"){
             var destinaViewController = segue.destinationViewController as MapShopViewController
+            
             let send = sender as UITableViewCell? //récupere la cell
             let inde = tableView.indexPathForCell(send!)?.row //recupere l'index de la cell
-            destinaViewController.title = "n*\(inde!) \(shoparray[inde!].nom)"  // affiche en titre l'index de la cell
+            
+            println("salut \(inde!)")
+            println("regarde \(self.listsho.shopcount())")
             
             destinaViewController.shoplit = self.listsho
-            destinaViewController.index = inde
+            destinaViewController.indexo = inde!
         }
     }
     

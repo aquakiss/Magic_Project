@@ -28,7 +28,7 @@ class CollectionCustomViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
     
-    var nbreçu : Int!
+    var nbreçu : String!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

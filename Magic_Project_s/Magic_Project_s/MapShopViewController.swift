@@ -5,7 +5,7 @@
 //  Created by Developer on 16/04/2015.
 //  Copyright (c) 2015 Developer. All rights reserved.
 //
-
+import MapKit
 import UIKit
 
 class MapShopViewController: UIViewController {
@@ -14,7 +14,7 @@ class MapShopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var ship = shoplit.shopAtIndex(index)
+        var ship = shoplit.shopAtIndex(indexo)
         NameShop.text = ship.nom
         Adress.text = ship.adresse
     }
@@ -25,12 +25,17 @@ class MapShopViewController: UIViewController {
     }
     
     var shoplit : ShopList!
-    var index : Int!
+    var indexo : Int!
     
     @IBOutlet weak var NameShop: UILabel!
 
     @IBOutlet weak var Adress: UILabel!
     
+    @IBOutlet weak var MapShop: MKMapView!
+    
+    @IBAction func GoBackbt(sender: UIButton) {
+        dismissViewControllerAnimated(true , completion: nil)   
+    }
     
     /*
     // MARK: - Navigation

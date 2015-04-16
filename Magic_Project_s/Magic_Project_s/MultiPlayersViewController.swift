@@ -9,12 +9,12 @@
 import UIKit
 
 class MultiPlayersViewController: UIViewController {
-    var nbplayers : String = "0"
+    var nbplayers : String!
     var infini : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nbplayers = "0"
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +25,24 @@ class MultiPlayersViewController: UIViewController {
     
     @IBAction func BtCusto(sender: UIButton) {
         println("coucou")
+        /*
         AlertDemandCreatPlayers()
+        while(nbplayers.toInt()! != 0){
+            /*func prepareForSegue(segue: UIStoryboardSegue, sender: UIButton?) {
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+            if(segue.identifier == "GoToCusto"){
+            var desViewController = segue.destinationViewController as CollectionCustomViewController
+            desViewController.nbreçu = self.nbplayers.toInt()!
+            println("change")
+            */
+            let storyboatrd : UIStoryboard = UIStoryboard(name : "Main", bundle:nil)
+            let nextViewController = storyboatrd.instantiateViewControllerWithIdentifier("GoToCusto") as CollectionCustomViewController
+            self.presentViewController(nextViewController, animated : true, completion : nil)
+        // }
+           // }
+
+        } */
     }
     
     /* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
@@ -58,15 +75,6 @@ class MultiPlayersViewController: UIViewController {
             //self.infini = false
             println("Text \((self.nbplayers).toInt()!) et  Text field: \(textField.text)")
             
-            func prepareForSegue(segue: UIStoryboardSegue, sender: UIButton?) {
-                // Get the new view controller using segue.destinationViewController.
-                // Pass the selected object to the new view controller.
-                if(segue.identifier == "GoToCusto"){
-                var desViewController = segue.destinationViewController as CollectionCustomViewController
-                    desViewController.nbreçu = self.nbplayers.toInt()!
-                }
-            }
-            
         }))
         
         // 4. Present the alert.
@@ -91,11 +99,11 @@ class MultiPlayersViewController: UIViewController {
         }
         else if(segue.identifier == "GoToEmp"){
             var desViewController = segue.destinationViewController as UIViewController
-        } /*
+        }
         else if(segue.identifier == "GoToCusto"){
             var desViewController = segue.destinationViewController as CollectionCustomViewController
-            
-           // desViewController.nbreçu = self.nbplayers.toInt()!
-        } */
+            nbplayers = "5"
+            desViewController.nbreçu = self.nbplayers
+        }
     }
 }

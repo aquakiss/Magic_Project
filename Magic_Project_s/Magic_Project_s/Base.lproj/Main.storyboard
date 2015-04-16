@@ -266,7 +266,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="CQ8-Ea-oTP" kind="presentation" identifier="GoToGeolocS" id="mck-2J-sea"/>
+                                    <segue destination="CQ8-Ea-oTP" kind="presentation" identifier="GotoGeolocS" id="mck-2J-sea"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -300,7 +300,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du magasin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7of-I2-ffm">
-                                <rect key="frame" x="87" y="15" width="200" height="20"/>
+                                <rect key="frame" x="99" y="15" width="200" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="UPv-hl-PY2"/>
                                     <constraint firstAttribute="width" constant="200" id="YOs-H5-VYK"/>
@@ -347,20 +347,37 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiT-Hn-wUh">
+                                <rect key="frame" x="22" y="7" width="69" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IvZ-VU-bbC"/>
+                                    <constraint firstAttribute="width" constant="69" id="eN1-Ep-HML"/>
+                                </constraints>
+                                <state key="normal" title=" &lt;-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoBackbt:" destination="CQ8-Ea-oTP" eventType="touchUpInside" id="LLr-h3-Lcd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bZS-tZ-yIp" firstAttribute="top" secondItem="qKq-Dv-Zap" secondAttribute="bottom" constant="17" id="0Ti-AH-2fJ"/>
+                            <constraint firstItem="bZS-tZ-yIp" firstAttribute="top" secondItem="SiT-Hn-wUh" secondAttribute="bottom" constant="74" id="Bgz-FI-coU"/>
                             <constraint firstAttribute="centerX" secondItem="bZS-tZ-yIp" secondAttribute="centerX" id="GPc-NC-E2Y"/>
                             <constraint firstAttribute="centerX" secondItem="XWm-qy-Pzn" secondAttribute="centerX" id="M2h-dS-hqr"/>
                             <constraint firstAttribute="centerX" secondItem="znc-aS-F0p" secondAttribute="centerX" id="PT4-ro-P8S"/>
                             <constraint firstAttribute="centerX" secondItem="qKq-Dv-Zap" secondAttribute="centerX" id="TTH-Gc-8MK"/>
+                            <constraint firstItem="SiT-Hn-wUh" firstAttribute="top" secondItem="iGk-6J-GcZ" secondAttribute="topMargin" constant="7" id="VCy-4s-0ZM"/>
                             <constraint firstAttribute="centerX" secondItem="7of-I2-ffm" secondAttribute="centerX" id="VNR-mC-aJ4"/>
                             <constraint firstItem="znc-aS-F0p" firstAttribute="top" secondItem="bZS-tZ-yIp" secondAttribute="bottom" constant="15" id="bgG-Fo-Guv"/>
                             <constraint firstItem="XWm-qy-Pzn" firstAttribute="top" secondItem="7of-I2-ffm" secondAttribute="bottom" constant="18" id="cyJ-YX-9eT"/>
+                            <constraint firstItem="7of-I2-ffm" firstAttribute="leading" secondItem="SiT-Hn-wUh" secondAttribute="trailing" constant="8" id="fp8-l2-7zC"/>
                             <constraint firstAttribute="centerX" secondItem="XWm-qy-Pzn" secondAttribute="centerX" id="gZM-iO-cKD"/>
                             <constraint firstItem="qKq-Dv-Zap" firstAttribute="top" secondItem="XWm-qy-Pzn" secondAttribute="bottom" constant="8" id="jAx-5A-hC9"/>
                             <constraint firstItem="7of-I2-ffm" firstAttribute="top" secondItem="iGk-6J-GcZ" secondAttribute="topMargin" constant="15" id="lWg-89-8ZI"/>
+                            <constraint firstItem="SiT-Hn-wUh" firstAttribute="leading" secondItem="iGk-6J-GcZ" secondAttribute="leadingMargin" constant="6" id="ldC-yc-dWv"/>
                             <constraint firstItem="qKq-Dv-Zap" firstAttribute="top" secondItem="XWm-qy-Pzn" secondAttribute="bottom" constant="20" id="ob5-xf-z59"/>
                             <constraint firstItem="bZS-tZ-yIp" firstAttribute="top" secondItem="qKq-Dv-Zap" secondAttribute="bottom" constant="17" id="pWw-fW-mPU"/>
                             <constraint firstItem="XWm-qy-Pzn" firstAttribute="top" secondItem="7of-I2-ffm" secondAttribute="bottom" constant="2" id="vJc-Ae-kFf"/>
@@ -369,6 +386,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Adress" destination="bZS-tZ-yIp" id="nOZ-iB-ZkS"/>
+                        <outlet property="MapShop" destination="znc-aS-F0p" id="Yzf-Yy-ORL"/>
                         <outlet property="NameShop" destination="XWm-qy-Pzn" id="NrV-yb-5eC"/>
                     </connections>
                 </viewController>
