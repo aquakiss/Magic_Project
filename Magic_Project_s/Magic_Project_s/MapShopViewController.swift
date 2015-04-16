@@ -14,6 +14,9 @@ class MapShopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var ship = shoplit.shopAtIndex(index)
+        NameShop.text = ship.nom
+        Adress.text = ship.adresse
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +24,14 @@ class MapShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    var shoplit : ShopList!
+    var index : Int!
+    
+    @IBOutlet weak var NameShop: UILabel!
 
+    @IBOutlet weak var Adress: UILabel!
+    
+    
     /*
     // MARK: - Navigation
 

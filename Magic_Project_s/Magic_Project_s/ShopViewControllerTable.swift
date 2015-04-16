@@ -20,7 +20,9 @@ class ShopViewControllerTable: UITableViewController {
         
         let tmp : Shop = Shop(name: "JoBar", adr: "33000, bdx", dejavisit: false)
         
+        println(tmp.ToString())
         listsho.addShop(tmp)
+        println(listsho.shopcount())
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,9 +41,9 @@ class ShopViewControllerTable: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
-    } */
-
+        return 1
+    }
+*/
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
@@ -53,7 +55,11 @@ class ShopViewControllerTable: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellShop", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
-        cell.textLabel.text? = shoparray[indexPath.row].nom
+        
+        println(indexPath.row)
+        var i : Int = indexPath.row
+        var shopa : Shop  = listsho.shopAtIndex(i)
+        cell.textLabel.text? = shopa.nom
         return cell
     }
 
@@ -102,7 +108,8 @@ class ShopViewControllerTable: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if(segue.identifier == "GoToAddShop"){
-            var destiViewController = segue.destinationViewController as FormShopViewController
+            var destiViewController = segue.destinationViewController as FormuShopViewController
+            destiViewController.newshoplist = self.listsho
         }
         else if(segue.identifier == "GotoGeolocS"){
             var destinaViewController = segue.destinationViewController as MapShopViewController
@@ -110,8 +117,8 @@ class ShopViewControllerTable: UITableViewController {
             let inde = tableView.indexPathForCell(send!)?.row //recupere l'index de la cell
             destinaViewController.title = "n*\(inde!) \(shoparray[inde!].nom)"  // affiche en titre l'index de la cell
             
-            //destinaViewController.listreçu = self.listshop
-            //destinaViewController.indecell = inde
+            destinaViewController.shoplit = self.listsho
+            destinaViewController.index = inde
         }
     }
     

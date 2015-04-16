@@ -9,7 +9,7 @@
 import UIKit
 
 class MultiPlayersViewController: UIViewController {
-    var nbplayers : String = ""
+    var nbplayers : String = "0"
     var infini : Bool = true
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class MultiPlayersViewController: UIViewController {
     
     @IBAction func BtCusto(sender: UIButton) {
         println("coucou")
-        //AlertDemandCreatPlayers()
+        AlertDemandCreatPlayers()
     }
     
     /* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
@@ -55,8 +55,18 @@ class MultiPlayersViewController: UIViewController {
             else {
                 self.nbplayers = "2"
             }
-            self.infini = false
+            //self.infini = false
             println("Text \((self.nbplayers).toInt()!) et  Text field: \(textField.text)")
+            
+            func prepareForSegue(segue: UIStoryboardSegue, sender: UIButton?) {
+                // Get the new view controller using segue.destinationViewController.
+                // Pass the selected object to the new view controller.
+                if(segue.identifier == "GoToCusto"){
+                var desViewController = segue.destinationViewController as CollectionCustomViewController
+                    desViewController.nbreçu = self.nbplayers.toInt()!
+                }
+            }
+            
         }))
         
         // 4. Present the alert.
@@ -69,7 +79,7 @@ class MultiPlayersViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    
+        println("coucous")
         if(segue.identifier == "GoToOne"){
             var desViewController = segue.destinationViewController as UIViewController
         }
@@ -81,15 +91,11 @@ class MultiPlayersViewController: UIViewController {
         }
         else if(segue.identifier == "GoToEmp"){
             var desViewController = segue.destinationViewController as UIViewController
-        }
+        } /*
         else if(segue.identifier == "GoToCusto"){
             var desViewController = segue.destinationViewController as CollectionCustomViewController
-            println(self.nbplayers)
-            desViewController.nbreçu = self.nbplayers.toInt()!
-        }
-    
-    
+            
+           // desViewController.nbreçu = self.nbplayers.toInt()!
+        } */
     }
-    
-
 }

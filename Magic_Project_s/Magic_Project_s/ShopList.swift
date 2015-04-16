@@ -23,4 +23,9 @@ class ShopList {
     func shopAtIndex(index: Int)-> Shop{
         return shopliste[index]
     }
+    
+    func shopcount() -> Int{
+        return shopliste.count
+    }
+    
 }

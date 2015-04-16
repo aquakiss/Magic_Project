@@ -14,14 +14,14 @@ class Shop {
     var DejaVisiter : Bool
     
     
-    init(name:String, adr:String,dejavisit:Bool){
+    init(name:String, adr:String, dejavisit:Bool){
         self.nom = name
         self.adresse = adr
         self.DejaVisiter = dejavisit
     }
     
     func ToString(){
-        println("Le shop \(nom) adresse \(adresse)")
+        println("Le shop \(nom) adresse \(adresse) et \(DejaVisiter)")
     }
     
 }

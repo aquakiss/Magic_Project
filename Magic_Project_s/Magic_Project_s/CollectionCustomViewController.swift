@@ -102,9 +102,6 @@ func AlertDemandCreatPlayers(){
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
         
-        while(boinfini == false){
-            AlertDemandCreatPlayers()
-        }
         return (nbplayers).toInt()!
     }
 

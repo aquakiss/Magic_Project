@@ -20,10 +20,10 @@
 		8BA7CD6A1ADF236A0082A492 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD691ADF236A0082A492 /* Shop.swift */; };
 		8BA7CD6C1ADF23880082A492 /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD6B1ADF23880082A492 /* ShopList.swift */; };
 		8BA7CD741ADF27790082A492 /* ShopViewControllerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */; };
-		8BA7CD761ADF27A90082A492 /* FormShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD751ADF27A90082A492 /* FormShopViewController.swift */; };
 		8BA7CD781ADF27D90082A492 /* MapShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD771ADF27D90082A492 /* MapShopViewController.swift */; };
 		8BA898771ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA898761ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift */; };
 		8BB8F2361ADD7F3100427CBA /* CollectionCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8F2351ADD7F3100427CBA /* CollectionCustomViewController.swift */; };
+		8BC4BDA01ADFCE500078547B /* FormuShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4BD9F1ADFCE500078547B /* FormuShopViewController.swift */; };
 		8BEB69C01AD8355B0078B4B2 /* MultiPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */; };
 		8BEB69C21AD84AAB0078B4B2 /* OnevsOne_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB69C11AD84AAB0078B4B2 /* OnevsOne_ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,10 +56,10 @@
 		8BA7CD691ADF236A0082A492 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		8BA7CD6B1ADF23880082A492 /* ShopList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
 		8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerTable.swift; sourceTree = "<group>"; };
-		8BA7CD751ADF27A90082A492 /* FormShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormShopViewController.swift; sourceTree = "<group>"; };
 		8BA7CD771ADF27D90082A492 /* MapShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapShopViewController.swift; sourceTree = "<group>"; };
 		8BA898761ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		8BB8F2351ADD7F3100427CBA /* CollectionCustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCustomViewController.swift; sourceTree = "<group>"; };
+		8BC4BD9F1ADFCE500078547B /* FormuShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormuShopViewController.swift; sourceTree = "<group>"; };
 		8BEB69BF1AD8355B0078B4B2 /* MultiPlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPlayersViewController.swift; sourceTree = "<group>"; };
 		8BEB69C11AD84AAB0078B4B2 /* OnevsOne_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnevsOne_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,8 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */,
-				8BA7CD751ADF27A90082A492 /* FormShopViewController.swift */,
 				8BA7CD771ADF27D90082A492 /* MapShopViewController.swift */,
+				8BC4BD9F1ADFCE500078547B /* FormuShopViewController.swift */,
 			);
 			name = ControllerShop;
 			sourceTree = "<group>";
@@ -307,10 +307,10 @@
 				8BA7CD6A1ADF236A0082A492 /* Shop.swift in Sources */,
 				8BA898771ADDCAEF007B6EF5 /* CollectionCustomViewCell.swift in Sources */,
 				8BA7CD741ADF27790082A492 /* ShopViewControllerTable.swift in Sources */,
+				8BC4BDA01ADFCE500078547B /* FormuShopViewController.swift in Sources */,
 				8B87BCC21AD012F0009D5B9A /* AppDelegate.swift in Sources */,
 				8BEB69C01AD8355B0078B4B2 /* MultiPlayersViewController.swift in Sources */,
 				8BB8F2361ADD7F3100427CBA /* CollectionCustomViewController.swift in Sources */,
-				8BA7CD761ADF27A90082A492 /* FormShopViewController.swift in Sources */,
 				8BEB69C21AD84AAB0078B4B2 /* OnevsOne_ViewController.swift in Sources */,
 				8B9B47911AD97038009AFE8B /* EmperorViewController.swift in Sources */,
 				8B9B47941AD97966009AFE8B /* CustomViewController.swift in Sources */,
