@@ -18,7 +18,7 @@ class ShopViewControllerTable: UITableViewController {
         
         shoparray = listsho.shopArray()
         
-        let tmp : Shop = Shop(name: "JoBar", adr: "33000, bdx", dejavisit: false)
+        let tmp : Shop = Shop(name: "JoBar", adr: "129, cours du medoc", cit: "Bordeaux", stat: "France", zi: "33300", dejavisit: true)
         listsho.addShop(tmp)
         
         // Uncomment the following line to preserve selection between presentations

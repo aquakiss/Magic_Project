@@ -26,6 +26,9 @@ class FormuShopViewController: UIViewController {
     @IBOutlet weak var TFNameshop: UITextField!
     @IBOutlet weak var TFAdress: UITextField!
     @IBOutlet weak var SWDejaVis: UISwitch!
+    @IBOutlet weak var TFCit: UITextField!
+    @IBOutlet weak var TFstat: UITextField!
+    @IBOutlet weak var TFzip: UITextField!
     
     @IBAction func GoBackBt(sender: UIButton) {
         dismissViewControllerAnimated(true, completion:nil)
@@ -35,7 +38,8 @@ class FormuShopViewController: UIViewController {
         
         if(TFNameshop.text != "" && TFAdress.text != "" ){
             
-            var trtkzmp : Shop = Shop(name: TFNameshop.text, adr: TFAdress.text, dejavisit: SWDejaVis.on)
+            var trtkzmp : Shop = Shop(name: TFNameshop.text, adr: TFAdress.text, cit: TFCit.text, stat: TFstat.text, zi: TFzip.text, dejavisit: SWDejaVis.on)
+            
             println("\(TFNameshop.text) \(TFAdress.text) \(SWDejaVis.on)")
             
             trtkzmp.ToString()

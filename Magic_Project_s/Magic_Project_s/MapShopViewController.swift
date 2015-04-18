@@ -16,7 +16,7 @@ class MapShopViewController: UIViewController {
         // Do any additional setup after loading the view.
         var ship = shoplit.shopAtIndex(indexo)
         NameShop.text = ship.nom
-        Adress.text = ship.adresse
+        Adress.text = ship.ReturnAdresse()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +37,14 @@ class MapShopViewController: UIViewController {
         dismissViewControllerAnimated(true , completion: nil)   
     }
     
+    var address = "1 Infinite Loop, CA, USA"
+    var geocoder = CLGeocoder()
+   /* geocoder.geocodeAddressString(address, {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+    if let placemark = placemarks?[0] as? CLPlacemark {
+    self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+    }
+    })
+    */
     /*
     // MARK: - Navigation
 

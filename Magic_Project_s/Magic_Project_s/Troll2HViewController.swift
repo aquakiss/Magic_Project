@@ -121,7 +121,7 @@ class Troll2HViewController: UIViewController {
         var res : Int = RandLanceDe()
         let allertControlle: UIAlertView = UIAlertView()
         allertControlle.delegate = self
-        allertControlle.title = "Lancer de Dé 20 faces"
+        allertControlle.title = "Lancer un Dé 20 faces"
         allertControlle.message = String(res)
         allertControlle.addButtonWithTitle("OK")
         allertControlle.show()
@@ -168,7 +168,7 @@ class Troll2HViewController: UIViewController {
         if((G1Liife.text).toInt() == 0){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, \(G1Nomplayer1.text) et \(G1Nomplayer2.text) n'ont plus de vie"
+            alertController.title = "Partie Gagnée, \(G1Nomplayer1.text) et \(G1Nomplayer2.text) n'ont plus de vie"
             alertController.message = ("Victoire pour \(G2Nomplayer1.text) et \(G2Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -177,7 +177,7 @@ class Troll2HViewController: UIViewController {
         else if((G2Liife.text).toInt() < 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, \(G2Nomplayer1.text) et \(G2Nomplayer2.text) ont perdu leurs vie"
+            alertController.title = "Partie Gagnée, \(G2Nomplayer1.text) et \(G2Nomplayer2.text) ont perdu leurs vie"
             alertController.message = ("Victoire pour \(G1Nomplayer1.text) et \(G1Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -191,7 +191,7 @@ class Troll2HViewController: UIViewController {
         if((G1MarkPoison.text).toInt() > 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, trop de poison sur \(G1Nomplayer1.text) et \(G1Nomplayer2.text)"
+            alertController.title = "Partie Gagnée, trop de poison sur \(G1Nomplayer1.text) et \(G1Nomplayer2.text)"
             alertController.message = ("Victoire pour \(G2Nomplayer1.text) et \(G2Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -200,7 +200,7 @@ class Troll2HViewController: UIViewController {
         else if((G2MarkPoison.text).toInt() > 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, le poison tue \(G2Nomplayer1.text) et \(G2Nomplayer2.text)"
+            alertController.title = "Partie Gagnée, le poison tue \(G2Nomplayer1.text) et \(G2Nomplayer2.text)"
             alertController.message = ("Victoire pour \(G1Nomplayer1.text) et \(G1Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()

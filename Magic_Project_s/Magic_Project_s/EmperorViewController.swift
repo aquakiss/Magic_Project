@@ -187,7 +187,7 @@ class EmperorViewController: UIViewController {
         if((G1LiifeEmp1.text).toInt() == 0){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, \(G1NomplayerEmp1.text) n'a plus de vie"
+            alertController.title = "Partie Gagnée, \(G1NomplayerEmp1.text) n'a plus de vie"
             alertController.message = ("Victoire pour le groupe de  \(G2NomplayerEmp2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -196,7 +196,7 @@ class EmperorViewController: UIViewController {
         else if((G2LiifeEmp2.text).toInt() < 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, \(G2NomplayerEmp2.text) n'a plus de vie"
+            alertController.title = "Partie Gagnée, \(G2NomplayerEmp2.text) n'a plus de vie"
             alertController.message = ("Victoire pour le groupe de  \(G1NomplayerEmp1.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()

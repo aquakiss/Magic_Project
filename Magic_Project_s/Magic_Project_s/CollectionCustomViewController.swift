@@ -8,17 +8,22 @@
 
 import UIKit
 
-let reuseIdentifier = "CellPlayer"
-var nbplayers : String = "1" // variable déterminera le nb de player a créer
-var boinfini  : Bool = false
+
 
 class CollectionCustomViewController: UICollectionViewController {
-
+    
+    let reuseIdentifier = "CellPlayer"
+    var nbplay : Int! = 1 // variable déterminera le nb de player a créer
+    var boinfini  : Bool = false
+    //var nbreçu : Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var test : String
-        
+        if(nbplay == 1){
+            println(nbplay)
+            AlertDemandCreatPlayers()
+        }
         // Register cell classes
         self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -27,8 +32,6 @@ class CollectionCustomViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    var nbreçu : String!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,30 +43,33 @@ class CollectionCustomViewController: UICollectionViewController {
     }
     
     @IBAction func RefreshView(sender: UIBarButtonItem) {
-        //self.CollectionCustomViewController.reloadData()
+        //refresh la page pour modifier le nb joureur
+        /*self.nbplay = 1
+        self.collectionView.reloadData() */
+        AlertDemandCreatPlayers()
     }
     
     
 
 
-/* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
-** saisir dans l'alerte
-*/
-func AlertDemandCreatPlayers(){
-    //Alerte demande combien de player va créé notre collectionview
-    //1. Create the alert controller.
-    var alert = UIAlertController(title: "Create players", message: "Enter a number [1 to 15]", preferredStyle: .Alert)
+    /* function servant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
+    ** saisir dans l'alerte
+    */
+    func AlertDemandCreatPlayers(){
+        //Alerte demande combien de player va créé notre collectionview
+        //1. Create the alert controller.
+        var alert = UIAlertController(title: "Create players", message: "Enter a number [1 to 15]", preferredStyle: .Alert)
     
-    //2. Add the text field. You can configure it however you need.
-    alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-        textField.placeholder = "Number of players"
-    })
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.placeholder = "Number of players"
+        })
     
-    //3. Grab the value from the text field, and print it when the user clicks OK.
-    alert.addAction(UIAlertAction(title: "Go!", style: .Default, handler: { (action) -> Void in
-        let textField = alert.textFields![0] as UITextField
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Go!", style: .Default, handler: { (action) -> Void in
+            let textField = alert.textFields![0] as UITextField
         
-        nbplayers = textField.text
+            var nbplayers : String = textField.text
         
         // condition testant si la personne a bien rentré un nombre
         if( (nbplayers).toInt()! >= 1 && (nbplayers).toInt()! <= 15) {
@@ -72,14 +78,15 @@ func AlertDemandCreatPlayers(){
         else {
             nbplayers = "2"
         }
-        boinfini = true
-        println("Text \((nbplayers).toInt()!) et  Text field: \(textField.text)")
-    }))
+            self.nbplay = nbplayers.toInt()!
+            println("Text \((nbplayers).toInt()!) et  Text field: \(textField.text)")
+            self.collectionView.reloadData()
+        }))
     
-    // 4. Present the alert.
-    self.presentViewController(alert, animated: true, completion: nil)
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
     
-}
+    }
 
     /*
     // MARK: - Navigation
@@ -101,13 +108,11 @@ func AlertDemandCreatPlayers(){
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        
-        return (nbplayers).toInt()!
+        return nbplay
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as UICollectionViewCell
-    
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellplay", forIndexPath: indexPath) as UICollectionViewCell
         // Configure the cell
         return cell
     }

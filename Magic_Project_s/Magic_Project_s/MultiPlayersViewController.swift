@@ -9,12 +9,11 @@
 import UIKit
 
 class MultiPlayersViewController: UIViewController {
-    var nbplayers : String!
+    var nbplayers : Int!
     var infini : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nbplayers = "0"
         // Do any additional setup after loading the view.
     }
 
@@ -24,25 +23,8 @@ class MultiPlayersViewController: UIViewController {
     }
     
     @IBAction func BtCusto(sender: UIButton) {
-        println("coucou")
-        /*
-        AlertDemandCreatPlayers()
-        while(nbplayers.toInt()! != 0){
-            /*func prepareForSegue(segue: UIStoryboardSegue, sender: UIButton?) {
-            // Get the new view controller using segue.destinationViewController.
-            // Pass the selected object to the new view controller.
-            if(segue.identifier == "GoToCusto"){
-            var desViewController = segue.destinationViewController as CollectionCustomViewController
-            desViewController.nbreçu = self.nbplayers.toInt()!
-            println("change")
-            */
-            let storyboatrd : UIStoryboard = UIStoryboard(name : "Main", bundle:nil)
-            let nextViewController = storyboatrd.instantiateViewControllerWithIdentifier("GoToCusto") as CollectionCustomViewController
-            self.presentViewController(nextViewController, animated : true, completion : nil)
-        // }
-           // }
-
-        } */
+        //println("coucou")
+        //AlertDemandCreatPlayers()
     }
     
     /* functionservant a afficher l'alerte ou l'utilisateur va créé x cell, x étant le number qu'il va
@@ -63,31 +45,32 @@ class MultiPlayersViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Go!", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             
-            self.nbplayers = textField.text
+            var players : String = textField.text
             
             // condition testant si la personne a bien rentré un nombre
-            if( (self.nbplayers).toInt()! >= 1 && (self.nbplayers).toInt()! <= 15) {
+            if( (players).toInt()! >= 1 && (players).toInt()! <= 15) {
                 println(self.nbplayers)
+                self.nbplayers = players.toInt()!
             }
             else {
-                self.nbplayers = "2"
+                players = "2"
             }
             //self.infini = false
-            println("Text \((self.nbplayers).toInt()!) et  Text field: \(textField.text)")
+            println("Text \((players).toInt()!) et  Text field: \(textField.text)")
             
+            //self.performSegueWithIdentifier("GoToCustom", sender: nil)
         }))
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        println("coucous")
         if(segue.identifier == "GoToOne"){
             var desViewController = segue.destinationViewController as UIViewController
         }
@@ -102,8 +85,8 @@ class MultiPlayersViewController: UIViewController {
         }
         else if(segue.identifier == "GoToCusto"){
             var desViewController = segue.destinationViewController as CollectionCustomViewController
-            nbplayers = "5"
-            desViewController.nbreçu = self.nbplayers
+            println("seg custom")
+            //desViewController.nbreçu = nbplayers
         }
     }
 }

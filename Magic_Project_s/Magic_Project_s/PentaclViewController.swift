@@ -244,7 +244,7 @@ class PentaclViewController: UIViewController {
         if((LiifeP3.text).toInt() < 1 && (LiifeP4.text).toInt() < 1 && (LiifeP5.text).toInt() > 1 && (LiifeP1.text).toInt() > 1 && (LiifeP2.text).toInt() > 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer1.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -254,7 +254,7 @@ class PentaclViewController: UIViewController {
         else if((LiifeP4.text).toInt() < 1 && (LiifeP5.text).toInt() < 1 && (LiifeP3.text).toInt() > 1 && (LiifeP2.text).toInt() > 1 && (LiifeP1.text).toInt() > 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -264,7 +264,7 @@ class PentaclViewController: UIViewController {
         else if((LiifeP1.text).toInt() < 1 && (LiifeP5.text).toInt() < 1 && (LiifeP2.text).toInt() > 1 && (LiifeP3.text).toInt() > 1 && (LiifeP4.text).toInt() > 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer3.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -274,7 +274,7 @@ class PentaclViewController: UIViewController {
             else if((LiifeP1.text).toInt() < 1 && (LiifeP2.text).toInt() < 1 && (LiifeP3.text).toInt() > 1 && (LiifeP4.text).toInt() > 1 && (LiifeP5.text).toInt() > 1){
                 let alertController: UIAlertView = UIAlertView()
                 alertController.delegate = self
-                alertController.title = "Partie Gagné"
+                alertController.title = "Partie Gagnée"
                 alertController.message = ("Victoire pour \(Nomplayer4.text)")
                 alertController.addButtonWithTitle("OK")
                 alertController.show()
@@ -284,7 +284,7 @@ class PentaclViewController: UIViewController {
                 else if((LiifeP2.text).toInt() < 1 && (LiifeP3.text).toInt() < 1 && (LiifeP4.text).toInt() > 1 && (LiifeP1.text).toInt() > 1 && (LiifeP5.text).toInt() > 1){
                     let alertController: UIAlertView = UIAlertView()
                     alertController.delegate = self
-                    alertController.title = "Partie Gagné"
+                    alertController.title = "Partie Gagnée"
                     alertController.message = ("Victoire pour \(Nomplayer5.text)")
                     alertController.addButtonWithTitle("OK")
                     alertController.show()
@@ -299,7 +299,7 @@ class PentaclViewController: UIViewController {
         if((MarkPoisonP3.text).toInt() > 9 && (MarkPoisonP4.text).toInt() > 9 && (MarkPoisonP5.text).toInt() < 9 && (MarkPoisonP2.text).toInt() < 9 && (MarkPoisonP1.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer1.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -309,7 +309,7 @@ class PentaclViewController: UIViewController {
         else if((MarkPoisonP4.text).toInt() > 9 && (MarkPoisonP5.text).toInt() > 9 && (MarkPoisonP1.text).toInt() < 9 && (MarkPoisonP3.text).toInt() < 9 && (MarkPoisonP2.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -319,7 +319,7 @@ class PentaclViewController: UIViewController {
         else if((MarkPoisonP1.text).toInt() > 9 && (MarkPoisonP5.text).toInt() > 9 && (MarkPoisonP4.text).toInt() < 9 && (MarkPoisonP2.text).toInt() < 9 && (MarkPoisonP3.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer3.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -329,7 +329,7 @@ class PentaclViewController: UIViewController {
         else if((MarkPoisonP1.text).toInt() > 9 && (MarkPoisonP2.text).toInt() > 9 && (MarkPoisonP3.text).toInt() < 9 && (MarkPoisonP4.text).toInt() < 9 && (MarkPoisonP5.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer4.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -339,7 +339,7 @@ class PentaclViewController: UIViewController {
         else if((MarkPoisonP2.text).toInt() > 9 && (MarkPoisonP3.text).toInt() > 9 && (MarkPoisonP4.text).toInt() < 9 && (MarkPoisonP5.text).toInt() < 9 && (MarkPoisonP1.text).toInt() < 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné"
+            alertController.title = "Partie Gagnée"
             alertController.message = ("Victoire pour \(Nomplayer5.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()

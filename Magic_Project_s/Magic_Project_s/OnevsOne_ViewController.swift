@@ -152,7 +152,7 @@ class OnevsOne_ViewController: UIViewController {
         if((LiifeP1.text).toInt() == 0){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, \(Nomplayer1.text) n'a plus de vie"
+            alertController.title = "Partie Gagnée, \(Nomplayer1.text) n'a plus de vie"
             alertController.message = ("Victoire pour \(Nomplayer2.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -161,7 +161,7 @@ class OnevsOne_ViewController: UIViewController {
         else if((LiifeP2.text).toInt() < 1){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, \(Nomplayer2.text) a perdu sa vie"
+            alertController.title = "Partie Gagnée, \(Nomplayer2.text) a perdu sa vie"
             alertController.message = ("Victoire pour \(Nomplayer1.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
@@ -184,7 +184,7 @@ class OnevsOne_ViewController: UIViewController {
         else if((MarkPoisonP2.text).toInt() > 9){
             let alertController: UIAlertView = UIAlertView()
             alertController.delegate = self
-            alertController.title = "Partie Gagné, le poison tue \(Nomplayer2.text)"
+            alertController.title = "Partie Gagnée, le poison tue \(Nomplayer2.text)"
             alertController.message = ("Victoire pour \(Nomplayer1.text)")
             alertController.addButtonWithTitle("OK")
             alertController.show()
