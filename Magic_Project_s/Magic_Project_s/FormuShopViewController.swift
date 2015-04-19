@@ -36,7 +36,7 @@ class FormuShopViewController: UIViewController {
 
     @IBAction func BtCreate(sender: UIButton) {
         
-        if(TFNameshop.text != "" && TFAdress.text != "" ){
+        if(TFNameshop.text != "" && TFAdress.text != "" && TFCit.text != "" && TFstat.text != ""){
             
             var trtkzmp : Shop = Shop(name: TFNameshop.text, adr: TFAdress.text, cit: TFCit.text, stat: TFstat.text, zi: TFzip.text, dejavisit: SWDejaVis.on)
             

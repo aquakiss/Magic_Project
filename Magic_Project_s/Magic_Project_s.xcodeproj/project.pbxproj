@@ -19,6 +19,9 @@
 		8B9B47941AD97966009AFE8B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B47931AD97966009AFE8B /* CustomViewController.swift */; };
 		8B9B7CED1AE0216800B28F80 /* AideList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B7CEC1AE0216800B28F80 /* AideList.swift */; };
 		8B9B7CEF1AE0217A00B28F80 /* AideInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B7CEE1AE0217A00B28F80 /* AideInfo.swift */; };
+		8BA6F15C1AE447A70024F03F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6F15B1AE447A70024F03F /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8BA6F15E1AE4484E0024F03F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6F15D1AE4484E0024F03F /* CoreData.framework */; };
+		8BA6F1601AE4487C0024F03F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6F15F1AE4487C0024F03F /* MapKit.framework */; };
 		8BA7CD6A1ADF236A0082A492 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD691ADF236A0082A492 /* Shop.swift */; };
 		8BA7CD6C1ADF23880082A492 /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD6B1ADF23880082A492 /* ShopList.swift */; };
 		8BA7CD741ADF27790082A492 /* ShopViewControllerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */; };
@@ -57,6 +60,9 @@
 		8B9B47931AD97966009AFE8B /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		8B9B7CEC1AE0216800B28F80 /* AideList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AideList.swift; sourceTree = "<group>"; };
 		8B9B7CEE1AE0217A00B28F80 /* AideInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AideInfo.swift; sourceTree = "<group>"; };
+		8BA6F15B1AE447A70024F03F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8BA6F15D1AE4484E0024F03F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8BA6F15F1AE4487C0024F03F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BA7CD691ADF236A0082A492 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		8BA7CD6B1ADF23880082A492 /* ShopList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
 		8BA7CD731ADF27790082A492 /* ShopViewControllerTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerTable.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA6F15E1AE4484E0024F03F /* CoreData.framework in Frameworks */,
+				8BA6F1601AE4487C0024F03F /* MapKit.framework in Frameworks */,
+				8BA6F15C1AE447A70024F03F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +98,9 @@
 		8B87BCB31AD012F0009D5B9A = {
 			isa = PBXGroup;
 			children = (
+				8BA6F15F1AE4487C0024F03F /* MapKit.framework */,
+				8BA6F15D1AE4484E0024F03F /* CoreData.framework */,
+				8BA6F15B1AE447A70024F03F /* CoreLocation.framework */,
 				8B87BCBE1AD012F0009D5B9A /* Magic_Project_s */,
 				8B87BCD41AD012F0009D5B9A /* Magic_Project_sTests */,
 				8B87BCBD1AD012F0009D5B9A /* Products */,
@@ -254,6 +266,11 @@
 				TargetAttributes = {
 					8B87BCBB1AD012F0009D5B9A = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8B87BCD01AD012F0009D5B9A = {
 						CreatedOnToolsVersion = 6.1;
